@@ -2,13 +2,13 @@
 
 A Python-based numerical analysis project designed to compute finite difference operators, construct difference tables, and detect, isolate, and correct localized errors in tabulated data using forward and backward difference methods.
 
-## 📌 Overview
+## Overview
 
 In numerical analysis, finite difference operators (such as forward $\Delta$, backward $\nabla$, and central $\delta$ differences) are fundamental tools for polynomial interpolation and numerical differentiation. A key property of difference tables is that a single isolated error in a dataset propagates predictably across subsequent difference columns in a fan-like (binomial coefficient) pattern, making it possible to locate and correct the exact erroneous entry.
 
 This repository contains Python implementations developed across lab exercises (`Lab 3` and `Lab 4`) to demonstrate finite difference calculations and automated/semi-automated error detection in tabulated functions.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 Difference-Operator-Error-Detector/
@@ -19,14 +19,14 @@ Difference-Operator-Error-Detector/
 └── README.md             # Project documentation
 ```
 
-## ✨ Features
+## Features
 
 * **Difference Table Generation:** Computes forward ($\Delta^n y_i$) and backward ($\nabla^n y_i$) difference tables for equally spaced data points.
 * **Error Propagation Analysis:** Tracks how an error $\epsilon$ at index $k$ expands across higher-order difference columns according to binomial coefficients $\binom{n}{r}(-1)^r \epsilon$.
 * **Anomaly Detection:** Identifies the exact row/index where an unexpected deviation occurs when a polynomial of degree $n$ fails to yield constant $n$-th differences.
 * **Data Correction:** Estimates the magnitude of the error $\epsilon$ and restores the corrected functional value.
 
-## 🧮 Mathematical Background
+## Mathematical Background
 
 For a set of equally spaced data points $(x_0, y_0), (x_1, y_1), \dots, (x_m, y_m)$ with step size $h$:
 
